@@ -1,4 +1,3 @@
-"use client";
 import { useDispatch } from "react-redux";
 import { deleteItem } from "../redux/slices/barangSlice";
 import Delete from "../assets/delete.png";

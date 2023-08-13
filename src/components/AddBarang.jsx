@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { addToTable } from "../redux/slices/barangSlice";

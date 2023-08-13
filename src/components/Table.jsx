@@ -1,4 +1,3 @@
-"use client"; // This is a client component 👈🏽
 import { useDispatch, useSelector } from "react-redux";
 import DeleteBarang from "./DeleteBarang";
 import UpdateBarang from "./UpdateBarang";
