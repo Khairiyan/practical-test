@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { addToTable } from "../redux/slices/barangSlice";
 import { useDispatch } from "react-redux";
 
-
 function generateNextId(data) {
   const ids = data.map((item) => item.id_barang);
   const maxId = Math.max(...ids);
@@ -51,12 +50,17 @@ export default function AddBarang() {
   };
 
   const tambahData = () => {
-    dispatch(addToTable({ id_barang: id, nama_barang: nama, gambar_barang: gambar, harga_beli: hargaBeli, harga_jual: hargaJual, stok: stok }));
-    setNama("");
-    setStok(0);
-    setHargaBeli(0);
-    setHargaJual(0);
-    setGambar(null);
+    if (nama === "" || stok === 0 || gambar === null || hargaBeli === 0 || hargaJual === 0) {
+      alert("Masih Terdapat form yang kosong");
+    } else {
+      dispatch(addToTable({ id_barang: id, nama_barang: nama, gambar_barang: gambar, harga_beli: hargaBeli, harga_jual: hargaJual, stok: stok }));
+      setNama("");
+      setStok(0);
+      setHargaBeli(0);
+      setHargaJual(0);
+      setGambar(null);
+      window.tambah_data.closeModal();
+    }
   };
 
   useEffect(() => {
