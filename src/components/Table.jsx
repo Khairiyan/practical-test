@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import DeleteBarang from "./DeleteBarang";
 import UpdateBarang from "./UpdateBarang";
 import { useState } from "react";
-import AddBarang from "./addBarang";
+import AddBarang from "./AddBarang";
 
 const Table = () => {
   const barang = useSelector((state) => state.barang.data);
