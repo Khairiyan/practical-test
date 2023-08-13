@@ -6,13 +6,6 @@ import AddBarang from "./addBarang";
 
 const Table = () => {
   const barang = useSelector((state) => state.barang.data);
-  const [currentPage, setCurrentPage] = useState(1);
-  const recordsPerPage = 5;
-  const lastIndex = currentPage * recordsPerPage;
-  const firstIndex = lastIndex - recordsPerPage;
-  const npage = Math.ceil(barang.length / recordsPerPage);
-  const records = barang.slice(firstIndex, lastIndex);
-  const numbers = [...Array(npage + 1).keys()].slice(1);
 
   const [searchTerm, setSearchTerm] = useState("");
   let index = 1;

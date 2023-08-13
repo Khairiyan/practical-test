@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { addToTable } from "../redux/slices/barangSlice";
 import { useDispatch } from "react-redux";
-// This is a client component 👈🏽
+
 
 function generateNextId(data) {
   const ids = data.map((item) => item.id_barang);
